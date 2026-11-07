@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101116">
+  <meta name="description" content="以海報卡片瀏覽電影，記錄每一段觀影感受。">
+  <title>片單｜我的觀影筆記</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="回到我的片單首頁"><span class="brand-mark">F</span><span>FRAME <small>MY FILM JOURNAL</small></span></a>
+    <a class="top-link" href="#collection">我的片單 <span aria-hidden="true">↘</span></a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A PERSONAL FILM JOURNAL</p>
+        <h1>每一部電影，<br><em>都是一段記憶。</em></h1>
+        <p class="hero-desc">收藏看過的故事，也記下它們留給我的感受。</p>
+        <a class="hero-cta" href="#collection">探索片單 <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-disc"><span>MY<br>FILM<br>JOURNAL</span><i></i></div><div class="hero-star">✳</div><div class="hero-note">STORIES<br>STAY WITH US</div></div>
+      <div class="hero-bottom"><span>VOL. 01 — 我的觀影收藏</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+    <section class="collection section-wrap" id="collection">
+      <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>我的片單<span class="heading-dot">.</span></h2></div><p class="collection-note">每部電影，都是我看過的故事。<br>從這裡重新回味。</p></div>
+      <div class="toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋電影名稱…" aria-label="搜尋電影名稱"></label><label class="filter-wrap"><span>類型</span><select id="genre-filter" aria-label="依類型篩選"><option value="all">全部類型</option></select></label><label class="filter-wrap sort-wrap"><span>排序</span><select id="sort-order" aria-label="排序"><option value="newest">上映年份：新到舊</option><option value="oldest">上映年份：舊到新</option><option value="title">片名：A–Z</option></select></label><span class="result-count" id="result-count"></span></div>
+      <div class="movie-grid" id="movie-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>找不到符合條件的電影，試試其他關鍵字或類型。</p>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">F</span><span>FRAME <small>MY FILM JOURNAL</small></span></a><p>把看過的故事，好好收藏。</p><span>© MY FILM JOURNAL</span></footer>
+  <script src="data/movies.js"></script><script src="js/site.js"></script>
+</body>
+</html>
